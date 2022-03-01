@@ -2565,6 +2565,22 @@ vte_terminal_class_init(VteTerminalClass *klass)
 #endif
 
         /* Install termprops */
+        _vte_terminal_class_install_termprop(klass,
+                                             I_(VTE_TERMPROP_FEDORA_CONTAINER_NAME),
+                                             VTE_PROPERTY_STRING,
+                                             VTE_PROPERTY_FLAG_NONE);
+        _vte_terminal_class_install_termprop(klass,
+                                             I_(VTE_TERMPROP_FEDORA_CONTAINER_RUNTIME),
+                                             VTE_PROPERTY_STRING,
+                                             VTE_PROPERTY_FLAG_NONE);
+        _vte_terminal_class_install_termprop(klass,
+                                             I_(VTE_TERMPROP_FEDORA_SHELL_PRECMD),
+                                             VTE_PROPERTY_VALUELESS,
+                                             VTE_PROPERTY_FLAG_NONE);
+        _vte_terminal_class_install_termprop(klass,
+                                             I_(VTE_TERMPROP_FEDORA_SHELL_PREEXEC),
+                                             VTE_PROPERTY_VALUELESS,
+                                             VTE_PROPERTY_FLAG_NONE);
 }
 
 /* public API */
