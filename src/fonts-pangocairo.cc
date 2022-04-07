@@ -186,6 +186,7 @@ FontInfo::measure_font()
                 pango_layout_get_extents(m_layout.get(), nullptr, &logical);
                 max_width = std::max(max_width, PANGO_PIXELS_CEIL(logical.width));
                 max_height = std::max(max_height, PANGO_PIXELS_CEIL(logical.height));
+                printf("%d,%d\n", max_width, max_height);
         }
 
         /* Use the sample text to get the baseline */
@@ -197,6 +198,8 @@ FontInfo::measure_font()
 
         m_height = max_height;
         m_width = max_width;
+        //        m_height = 100;
+        printf("%d,%d\n", m_width, m_height);
 
 	/* Now that we shaped the entire ASCII character string, cache glyph
 	 * info for them */

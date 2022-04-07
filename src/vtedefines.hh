@@ -96,7 +96,7 @@
 
 #define VTE_FONT_SCALE_MIN (.25)
 #define VTE_FONT_SCALE_MAX (4.)
-#define VTE_CELL_SCALE_MIN (1.)
+#define VTE_CELL_SCALE_MIN (.25)
 #define VTE_CELL_SCALE_MAX (2.)
 
 /* Minimum time between two beeps (µs) */
@@ -143,7 +143,7 @@
 
 #define VTE_TERMINFO_NAME "xterm-256color"
 
-#define VTE_SIXEL_ENABLED_DEFAULT false
+#define VTE_SIXEL_ENABLED_DEFAULT true
 
 #define VTE_SIXEL_MAX_WIDTH (2048)
 #define VTE_SIXEL_MAX_HEIGHT (2052)

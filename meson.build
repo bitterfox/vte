@@ -645,7 +645,7 @@ endif
 # as subproject; see vte#345.
 if meson.version().version_compare('>= 0.58.0') or not meson.is_subproject()
   meson.add_dist_script(
-    find_program('meson_changelog.sh'),
+    find_program('meson_changelog.sh').path(),
   )
 endif
 

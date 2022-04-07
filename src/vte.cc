@@ -7058,7 +7058,11 @@ Terminal::apply_font_metrics(int cell_width_unscaled,
         char_descent = MAX(char_descent, 1);
 
         /* For convenience only. */
+        //        char_descent = 5;
         char_height = char_ascent + char_descent;
+        //        cell_height_unscaled=20;
+        //        cell_height=20;
+        printf("%d, %d, %d, %d, %d, %d, %d\n", cell_width_unscaled, cell_height_unscaled, cell_width, cell_height, char_ascent, char_descent, char_height);
 
 	/* Change settings, and keep track of when we've changed anything. */
         if (cell_width_unscaled != m_cell_width_unscaled) {
@@ -7130,6 +7134,7 @@ Terminal::apply_font_metrics(int cell_width_unscaled,
 	}
 	/* Repaint. */
 	invalidate_all();
+
 }
 
 void
@@ -7162,7 +7167,8 @@ Terminal::ensure_font()
                                                  m_widget,
                                                  m_fontdesc.get(),
                                                  m_cell_width_scale,
-                                                 m_cell_height_scale);
+                                                 //                                                 0.85);
+                                                                         m_cell_height_scale);
 			m_draw.get_text_metrics(
                                                     &cell_width, &cell_height,
                                                     &char_ascent, &char_descent,
